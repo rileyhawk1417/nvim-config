@@ -1,9 +1,9 @@
 # Description
 
-This repo houses mainly my [Neovim config]('https://neovim.io/'). Currently am using [LazyVim]('https://lazyvim.github.io/') as the base for the editor.
-The package manager if Lazy which was made by [folke]('https://github.com/folke/lazy.nvim'). Lazy package manager prioritizes on lazy loading.
+This repo houses mainly my [Neovim config](https://neovim.io/). Currently am using [LazyVim](https://lazyvim.github.io/) as the base for the editor.
+The package manager if Lazy which was made by [folke](https://github.com/folke/lazy.nvim). Lazy package manager prioritizes on lazy loading.
 Very useful when you have alot of plugins.
-Most of the config was migrated from [Packer]('https://github.com/wbthomason/packer.nvim') which is still okay but just wanted to try something else for a change :)
+Most of the config was migrated from [Packer](https://github.com/wbthomason/packer.nvim) which is still okay but just wanted to try something else for a change :)
 
 
 # 💤 LazyVim
