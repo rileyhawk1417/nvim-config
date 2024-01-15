@@ -136,4 +136,6 @@ return {
       },
     },
   },
+  { "mbbill/undotree" },
+  { "folke/neodev.nvim", opts = {} },
 }

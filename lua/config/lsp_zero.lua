@@ -62,7 +62,6 @@ local mason_lsp_modules = {
   "pyright",
 }
 
-require("dart-tools")
 require("fidget").setup({})
 require("mason").setup({
   ensure_installed = mason_modules,
@@ -82,7 +81,8 @@ require("mason-lspconfig").setup({
   },
 })
 
-require("lspconfig").dartls.setup({
+require("dart-tools")
+require("lspconfig")["dartls"].setup({
   capabilities = capabilities,
   cmd = {
     "dart",
