@@ -114,11 +114,11 @@ keymap.set("n", "<leader>fu", ":UndotreeToggle<CR>", { desc = "Undo Tree" })
 -- Obsidian Nvim
 -- NOTE: The others below require arguments
 keymap.set("n", "<leader>on", ":ObsidianNew", { desc = "Create New Obsidian Note" })
---keymap.set("n", "<leader>oo", ":ObsidianOpen", { desc = "Open Obsidian Note" })
-keymap.set("n", "<leader>os", ":ObsidianQuickSwitch", { desc = "Obsidian Quick Switch" })
+keymap.set("n", "<leader>oo", ":ObsidianOpen", { desc = "Open Obsidian Note" })
+keymap.set("n", "<leader>os", ":ObsidianQuickSwitch<CR>", { desc = "Obsidian Quick Switch" })
 
 -- Buffer remaps
-keymap.set("n", "<leader>b", ":buffers", { desc = "List Open buffers" })
+keymap.set("n", "<leader>bb", ":buffers", { desc = "List Open buffers" })
 keymap.set("n", "<leader>bx", ":bd<CR>", { desc = "Close current buffer" })
 keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Go to next buffer" })
-keymap.set("n", "<leader>b", ":bprevious<CR>", { desc = "Go to previous buffer" })
+keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Go to previous buffer" })
