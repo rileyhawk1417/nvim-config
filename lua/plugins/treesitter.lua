@@ -9,6 +9,8 @@ local parser_list = {
   "html",
   "java",
   "json",
+  "markdown",
+  "markdown_inline",
   "javascript",
   "lua",
   "typescript",
@@ -34,7 +36,8 @@ return {
     config = function()
       local configs = require("nvim-treesitter.configs")
       configs.setup({
-        sync_install = true,
+        auto_install = true,
+        sync_install = false,
         highlight = { enable = true },
         indent = { enable = true },
         ensure_installed = parser_list,

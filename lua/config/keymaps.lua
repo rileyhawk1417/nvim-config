@@ -52,18 +52,16 @@ keymap.set("n", "<C-down>", "<C-w>-", { desc = "Resize pane down" })
 
 -- Plugin Keybindings
 harpoon:setup()
--- REQUIRED
 
 keymap.set("n", ";a", function()
   harpoon:list():append()
-end)
-
+end, { desc = "Add file to Harpoon list" })
 keymap.set("n", ";c", function()
   harpoon:list():clear()
-end)
+end, { desc = "Clear Harpoon list" })
 keymap.set("n", "<C-e>", function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
-end)
+end, { desc = "Toggle Harpoon list" })
 
 keymap.set("n", "<C-1>", function()
   harpoon:list():select(1)
@@ -89,6 +87,7 @@ end, opts)
 --
 local builtin = require("telescope.builtin")
 keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+keymap.set("n", "<leader>fg", builtin.git_files, { desc = "Find git files" })
 keymap.set("n", "<leader>/", builtin.live_grep, { desc = "Live grep find in files" })
 keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find in buffers" })
 keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find in help" })
@@ -98,7 +97,7 @@ keymap.set("n", "<leader>e", ":Neotree toggle<Return>", { desc = "Neotree toggle
 -- Git Keybinds
 keymap.set("n", "<leader>gg", ":Git<CR>", { desc = "Git" })
 keymap.set("n", "<leader>gi", ":Git init<CR>", { desc = "Git init" })
-keymap.set("n", "<leader>P", function()
+keymap.set("n", "<leader>gP", function()
   vim.cmd.Git("push")
 end, { desc = "Git push" })
 
@@ -111,3 +110,15 @@ keymap.set("n", "<leader>fz", ":ZenMode<CR>", { desc = "Zen Mode" })
 
 -- Undo Tree
 keymap.set("n", "<leader>fu", ":UndotreeToggle<CR>", { desc = "Undo Tree" })
+
+-- Obsidian Nvim
+-- NOTE: The others below require arguments
+keymap.set("n", "<leader>on", ":ObsidianNew", { desc = "Create New Obsidian Note" })
+--keymap.set("n", "<leader>oo", ":ObsidianOpen", { desc = "Open Obsidian Note" })
+keymap.set("n", "<leader>os", ":ObsidianQuickSwitch", { desc = "Obsidian Quick Switch" })
+
+-- Buffer remaps
+keymap.set("n", "<leader>b", ":buffers", { desc = "List Open buffers" })
+keymap.set("n", "<leader>bx", ":bd<CR>", { desc = "Close current buffer" })
+keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Go to next buffer" })
+keymap.set("n", "<leader>b", ":bprevious<CR>", { desc = "Go to previous buffer" })

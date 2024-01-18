@@ -69,11 +69,11 @@ return {
       workspaces = {
         {
           name = "personal",
-          path = "~/vaults/personal",
+          path = "~/Documents/MarkDownNotes/personal",
         },
         {
           name = "work",
-          path = "~/vaults/work",
+          path = "~/Documents/MarkDownNotes/work",
         },
       },
 
@@ -132,16 +132,16 @@ return {
       -- Define functions
       vim.keymap.set("n", "<leader>nf", function()
         neogen.generate({ type = "func" })
-      end)
+      end, { desc = "Generate doc for functions" })
 
       -- Define types
       vim.keymap.set("n", "<leader>nt", function()
         neogen.generate({ type = "type" })
-      end)
+      end, { desc = "Generate doc for types" })
       -- Define type defs
       vim.keymap.set("n", "<leader>nd", function()
         neogen.generate({ type = "typedef" })
-      end)
+      end, { desc = "Generate doc for type definitions" })
     end,
   },
 }
