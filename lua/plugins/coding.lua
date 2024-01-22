@@ -66,17 +66,6 @@ return {
       -- see below for full list of optional dependencies 👇
     },
     opts = {
-      workspaces = {
-        {
-          name = "personal",
-          path = "~/Documents/MarkDownNotes/personal",
-        },
-        {
-          name = "work",
-          path = "~/Documents/MarkDownNotes/work",
-        },
-      },
-
       -- see below for full list of options 👇
     },
   },
