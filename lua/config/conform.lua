@@ -1,7 +1,9 @@
 require("conform").setup({
   formatters_by_ft = {
     lua = { "stylua" },
-    python = { "black" },
+    -- NOTE: Maybe there should be a way to isolate according to directory?
+    --python = { "autopep8", "black" },
+    python = { "autopep8" },
     javascript = { "prettierd" },
     typescript = { "prettierd" },
     jsx = { "prettierd" },
