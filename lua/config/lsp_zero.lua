@@ -60,6 +60,7 @@ local mason_lsp_modules = {
   "tailwindcss",
   "ruff_lsp",
   "pyright",
+  "intelephense",
 }
 
 require("fidget").setup({})
@@ -140,8 +141,8 @@ cmp.setup({
     --["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
     ["<Tab>"] = cmp.mapping.select_next_item(cmp_select),
     ["<S-Tab>"] = cmp.mapping.select_prev_item(cmp_select),
-    ["S--"] = cmp.mapping.scroll_docs(-4),
-    ["S-+"] = cmp.mapping.scroll_docs(4),
+    ["<S-->"] = cmp.mapping.scroll_docs(-4),
+    ["<S-+>"] = cmp.mapping.scroll_docs(4),
     ["<CR>"] = cmp.mapping.confirm({ select = true }),
   }),
 })
