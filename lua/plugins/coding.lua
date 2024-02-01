@@ -21,6 +21,17 @@ return {
         -- your configuration comes here
         -- or leave it empty to use the default settings
         -- refer to the configuration section below
+        vim.keymap.set("n", "<leader>tt", function()
+          require("trouble").toggle()
+        end),
+
+        vim.keymap.set("n", "<leader>tn", function()
+          require("trouble").next({ skip_groups = true, jump = true })
+        end, { desc = "Move to next trouble issue" }),
+
+        vim.keymap.set("n", "<leader>tp", function()
+          require("trouble").previous({ skip_groups = true, jump = true })
+        end, { desc = "Move to next trouble issue" }),
       })
     end,
   },
@@ -36,7 +47,7 @@ return {
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
-
+  --[[
   {
     "ThePrimeagen/refactoring.nvim",
     dependencies = {
@@ -47,6 +58,8 @@ return {
       require("refactoring").setup()
     end,
   },
+]]
+  --
   {
     "epwalsh/obsidian.nvim",
     version = "*", -- recommended, use latest release instead of latest commit
@@ -64,9 +77,6 @@ return {
       "nvim-lua/plenary.nvim",
 
       -- see below for full list of optional dependencies 👇
-    },
-    opts = {
-      -- see below for full list of options 👇
     },
   },
   {
