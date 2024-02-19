@@ -47,16 +47,25 @@ require("obsidian").setup({
   completion = {
     nvim_cmp = true,
     min_chars = 2,
-    prepend_note_id = true,
-    new_notes_location = "notes_subdir",
-    prepend_note_path = false,
-    use_path_only = false,
+    --prepend_note_id = true,
+    --prepend_note_path = false,
+    ---use_path_only = false,
   },
+  wiki_link_func = function(opts)
+    if opts.id == nil then
+      return string.format("[[%s]]", opts.label)
+    elseif opts.label ~= opts.id then
+      return string.format("[[%s|%s]]", opts.id, opts.label)
+    else
+      return string.format("[[%s]]", opts.id)
+    end
+  end,
   templates = {
     subdir = "Templates/ObsidianNvim",
     date_format = "%Y-%m-%d-%a",
     time_format = "%H:%M",
   },
+  new_notes_location = "notes_subdir",
   note_id_func = note_id_generator,
   note_frontmatter_func = front_matter_handler,
 })
